@@ -131,10 +131,10 @@ func (r *RTC) SendControlBytes(data []byte) error {
 	log := r.Log()
 
 	// We don't need to report an error to the caller, but we can report it to the client over the meta channel
-	if r.FrameChannel == nil {
+	if r.ControlChannel == nil {
 		log.Warn().Msg("Cannot send control data. Control channel is not configured")
 		return nil
 	}
 
-	return r.FrameChannel.Send(data)
+	return r.ControlChannel.Send(data)
 }
