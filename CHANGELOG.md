@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.1](https://github.com/VU-ASE/pkg-Rtc/compare/v1.0.0...v1.0.1) (2024-03-26)
+
+
+### Bug Fixes
+
+* control channel bug ([b43cb3e](https://github.com/VU-ASE/pkg-Rtc/commit/b43cb3e9344eadf77b899b0e2f7eac8cd51e4311))
+
 ## 1.0.0 (2024-01-25)
 
 
