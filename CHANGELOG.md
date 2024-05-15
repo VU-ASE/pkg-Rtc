@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.0](https://github.com/VU-ASE/pkg-Rtc/compare/v1.0.1...v1.1.0) (2024-05-15)
+
+
+### Features
+
+* added timestamping information to requests ([12f7c8d](https://github.com/VU-ASE/pkg-Rtc/commit/12f7c8d99f8cabdf332a1d40459bb7b58ab25e88))
+
 ## [1.0.1](https://github.com/VU-ASE/pkg-Rtc/compare/v1.0.0...v1.0.1) (2024-03-26)
 
 
