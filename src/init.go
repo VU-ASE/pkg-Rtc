@@ -22,9 +22,10 @@ type RTC struct {
 	Candidates     []webrtc.ICECandidateInit // the **local** ICE candidates (that can be transmitted to the other peers)
 	CandidatesLock *sync.Mutex               // to make sure ICE candidates can be managed concurrently
 	// Data channels
-	MetaChannel    *webrtc.DataChannel // the data channel used to send meta information about requests made (such as requesting a video stream)
-	ControlChannel *webrtc.DataChannel // the data channel used to send controller data (e.g. steering wheel angle)
-	FrameChannel   *webrtc.DataChannel // the data channel used to send frames with video data and other meta information (such as sensoric data)
+	MetaChannel     *webrtc.DataChannel // the data channel used to send meta information about requests made (such as requesting a video stream)
+	ControlChannel  *webrtc.DataChannel // the data channel used to send controller data (e.g. steering wheel angle)
+	FrameChannel    *webrtc.DataChannel // the data channel used to send frames with video data and other meta information (such as sensoric data)
+	TimestampOffset int64               // the timestamp offset to calculate the time difference between the client and the server
 }
 
 // Create an easy function to get a logger with the context and connection id already set
@@ -38,9 +39,10 @@ func NewRTC(id string) *RTC {
 	candidates := make([]webrtc.ICECandidateInit, 0)
 
 	return &RTC{
-		Id:             id,
-		Candidates:     candidates,
-		CandidatesLock: &candidatesMux,
+		Id:              id,
+		Candidates:      candidates,
+		CandidatesLock:  &candidatesMux,
+		TimestampOffset: 0,
 	}
 }
 
