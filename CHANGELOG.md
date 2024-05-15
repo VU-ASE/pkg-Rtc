@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.1](https://github.com/VU-ASE/pkg-Rtc/compare/v1.1.0...v1.1.1) (2024-05-15)
+
+
+### Bug Fixes
+
+* add TimestampOffset to RTC object ([92ebf6e](https://github.com/VU-ASE/pkg-Rtc/commit/92ebf6efe3553af37de53abee86f842869e3aa20))
+
 ## [1.1.0](https://github.com/VU-ASE/pkg-Rtc/compare/v1.0.1...v1.1.0) (2024-05-15)
 
 
